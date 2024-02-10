@@ -1,5 +1,5 @@
 class Prototype < ApplicationRecord
-  belongs_to :room
+  
   belongs_to :user
   has_one_attached :image
 
@@ -7,6 +7,5 @@ class Prototype < ApplicationRecord
   validates :catch_copy, presence: true
   validates :concept, presence: true
   validates :image, presence: true
-
-  attribute :title, :string
 end
+
