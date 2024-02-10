@@ -4,6 +4,10 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.new
   end
 
+  def show
+    @prototype = Prototype.find(params[:id])
+  end
+
   def index
     @prototypes = Prototype.all
   end
