@@ -15,7 +15,7 @@ class PrototypesController < ApplicationController
 
   def update
     if @prototype.update(prototype_params)
-      redirect_to @prototype, notice: 'Prototype was successfully updated.'
+      redirect_to @prototype
     else
       render :edit
   end
@@ -30,10 +30,14 @@ end
     @prototype.user = current_user
   
     if @prototype.save
-      redirect_to root_path, notice: 'Prototype was successfully created.'
+      redirect_to root_path
     else
       render :new
     end
+  end
+  def destroy
+    @prototype.destroy
+  redirect_to root_path
   end
 
   private
