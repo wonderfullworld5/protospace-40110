@@ -1,5 +1,6 @@
 class PrototypesController < ApplicationController
   before_action :set_prototype, only: [:show, :edit, :update, :destroy]
+
   def new
     @prototype = Prototype.new
   end
@@ -9,11 +10,17 @@ class PrototypesController < ApplicationController
   end
 
   def edit
+    @prototype = Prototype.find(params[:id])
   end
 
   def update
+    if @prototype.update(prototype_params)
+      redirect_to @prototype, notice: 'Prototype was successfully updated.'
+    else
+      render :edit
   end
-  
+end
+
   def index
     @prototypes = Prototype.all
   end
