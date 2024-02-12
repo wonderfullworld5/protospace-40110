@@ -5,7 +5,6 @@
         <%= @prototype.title %>
       </p>
       <%= link_to "by #{@prototype.user.name}", root_path, class: :prototype__user %>
-      
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user == @prototype.user %>
         <div class="prototype__manage">
@@ -14,11 +13,9 @@
         </div>
       <% end %>
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-      
       <div class="prototype__image">
         <%= image_tag @prototype.image %>
       </div>
-      
       <div class="prototype__body">
         <div class="prototype__detail">
           <p class="detail__title">キャッチコピー</p>
@@ -33,11 +30,10 @@
           </p>
         </div>
       </div>
-      
       <div class="prototype__comments">
-        <%# ログインしているユーザーにはコメント投稿フォームを表示する %>
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
-          <%= form_with(model: Comment.new, url: prototype_comments_path(@prototype), local: true) do |f| %>
+          <%= form_with model: Comment.new, url: prototype_comments_path(@prototype), local: true do |f| %>
             <div class="field">
               <%= f.label :content, "コメント" %><br />
               <%= f.text_area :content, id: "comment_content" %>
@@ -47,18 +43,18 @@
             </div>
           <% end %>
         <% end %>
-        <%# // ログインしているユーザーにはコメント投稿フォームを表示する %>
-        
+        <%# // ログインしているユーザーには上記を表示する %>
         <ul class="comments_lists">
           <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-          <li class="comments_list">
-            <%# <%= " コメントのテキスト "%>
-            <%# <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
-          </li>
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+              <%= comment.content %>
+              <%= link_to "（#{comment.user.name}）", root_path, class: :comment_user %>
+            </li>
+          <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
         </ul>
       </div>
     </div>
   </div>
 </main>
-
