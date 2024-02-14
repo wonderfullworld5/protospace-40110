@@ -3,12 +3,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-<<: *default
-adapter: mysql2
-username: root
-password:
-host: localhost
-database: protospace-40110_development
+  <<: *default
+  adapter: mysql2
+  username: root
+  password:
+  host: localhost
+  database: protospace-40110_rails7_development
 
 test:
   <<: *default
@@ -16,11 +16,9 @@ test:
   username: root
   password:
   host: localhost
-  database: protospace-40110_test
+  database: protospace-40110_rails7_test
 
 production:
-<<: *default
-adapter: postgresql
+  <<: *default
+  adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
-
-
