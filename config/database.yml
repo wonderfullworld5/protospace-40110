@@ -8,7 +8,7 @@ adapter: mysql2
 username: root
 password:
 host: localhost
-database: protospace_40110_development
+database: protospace-40110_development
 
 test:
   <<: *default
@@ -16,7 +16,7 @@ test:
   username: root
   password:
   host: localhost
-  database: protospace_40110_test
+  database: protospace-40110_test
 
 production:
 <<: *default
