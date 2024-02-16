@@ -1,6 +1,6 @@
 class AddColumnsToUsers < ActiveRecord::Migration[7.0]
   def change
-    # 既存のカラムが存在しないことを確認する
+    
     unless column_exists?(:users, :profile)
       add_column :users, :profile, :text
     end
