@@ -5,7 +5,7 @@ class CreatePrototypes < ActiveRecord::Migration[7.0]
       t.text :profile,              null: false
       t.text :occupation,           null: false
       t.text :position,             null: false
-  #ここに記述を追加して、１つのファイルにまとめる
+  #ここに記述を追加して、１つのファイルにまとめた
       t.timestamps
     end
   end
