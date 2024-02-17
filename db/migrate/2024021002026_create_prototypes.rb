@@ -1,5 +1,7 @@
 class CreatePrototypes < ActiveRecord::Migration[7.0]
   def change
+    unless table_exists?(:prototypes)
+      #上に記述追加した
     create_table :prototypes do |t|
       t.string :name,               null: false
       t.text :profile,              null: false
@@ -10,6 +12,4 @@ class CreatePrototypes < ActiveRecord::Migration[7.0]
     end
   end
 end
-
-
-
+end
