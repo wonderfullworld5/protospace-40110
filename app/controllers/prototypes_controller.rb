@@ -29,6 +29,7 @@ class PrototypesController < ApplicationController
   end
   
   def create
+    p prototype_params # prototype_paramsを出力する
     @prototype = Prototype.new(prototype_params)
     @prototype.user = current_user
   
