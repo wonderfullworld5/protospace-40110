@@ -1,5 +1,6 @@
 <div class="prototype-card">
   <h3><%= prototype.title %></h3>
   <p><%= prototype.catch_copy %></p>
+  <%= image_tag url_for(prototype.image), class: "prototype-image" if prototype.image.attached? %>
   <p>投稿者: <%= link_to prototype.user.name, user_path(prototype.user) %></p>
 </div>
