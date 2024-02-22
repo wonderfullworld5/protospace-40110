@@ -1,5 +1,10 @@
-# This file is used by Rack-based servers to start the application.
+Rails.application.configure do
+  # Application configuration goes here
+  config.active_storage.service = :local
+end
 
-require_relative "config/environment"
+# Load the Rails application.
+require_relative "application"
 
-run Rails.application
+# Initialize the Rails application.
+Rails.application.initialize!
