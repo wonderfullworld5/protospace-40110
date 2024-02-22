@@ -25,11 +25,12 @@
         </tbody>
       </table>
       <h2 class="page-heading">
-        <%= "#{@user.name} さんのプロトタイプ" %>
-      </h2>
-      <div class="user__card">
-        <%= render partial: 'prototype', collection: @user.prototypes %>
-      </div>
+  <%= "#{@user.name} さんのプロトタイプ" %>
+</h2>
+<div class="user__card">
+  <%= render partial: 'prototype', collection: @user.prototypes %>
+</div>
+
     </div>
   </div>
 </div>
