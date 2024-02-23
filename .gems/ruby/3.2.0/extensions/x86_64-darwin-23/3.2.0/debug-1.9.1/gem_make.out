@@ -1,0 +1,20 @@
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+/Users/AH/.rbenv/versions/3.2.0/bin/ruby -I /Users/AH/.rbenv/versions/3.2.0/lib/ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-622yzf sitelibdir\=./.gem.20240223-12248-622yzf clean
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-622yzf sitelibdir\=./.gem.20240223-12248-622yzf
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-622yzf sitelibdir\=./.gem.20240223-12248-622yzf install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20240223-12248-622yzf/debug
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-622yzf sitelibdir\=./.gem.20240223-12248-622yzf clean

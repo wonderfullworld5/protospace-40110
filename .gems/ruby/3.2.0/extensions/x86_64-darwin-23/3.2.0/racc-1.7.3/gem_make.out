@@ -1,0 +1,19 @@
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+/Users/AH/.rbenv/versions/3.2.0/bin/ruby -I /Users/AH/.rbenv/versions/3.2.0/lib/ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-lwgaui sitelibdir\=./.gem.20240223-12248-lwgaui clean
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-lwgaui sitelibdir\=./.gem.20240223-12248-lwgaui
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-lwgaui sitelibdir\=./.gem.20240223-12248-lwgaui install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20240223-12248-lwgaui/racc
+
+current directory: /Users/AH/projects/protospace-40110/.gems/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240223-12248-lwgaui sitelibdir\=./.gem.20240223-12248-lwgaui clean
